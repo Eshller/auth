@@ -2,6 +2,8 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const validator = require('validator');
 const User = require('../models/User');
+
+
 require('dotenv').config();
 
 const JWT_SECRET = process.env.JWT_SECRET;
@@ -96,4 +98,8 @@ const login = async (req, res) => {
   }
 };
 
-module.exports = { register, login };
+
+const docup = async (req,res)=>{
+  res.send("Uploaded susccessfully");
+}
+module.exports = { register, login, docup };
