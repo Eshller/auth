@@ -49,7 +49,7 @@ const Register = () => {
 
       router.push('/dashboard'); // Redirect to login page after successful registration
     } catch (error) {
-      setError('Username already exists. Please choose a different one.');
+      setError('Some error occured. Try again!');
       console.log(error);
     } finally {
       setIsLoading(false); // Stop loading regardless of success or failure
@@ -96,12 +96,11 @@ const Register = () => {
               onSubmit={handleSubmit}
               className=''
             >
-              <div className='col-span-6 sm:col-span-3'>
+              <div className='col-span-6 sm:col-span-3 my-9'>
 
-                <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white" htmlFor="file_input">Upload file</label>
-                <input className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="file_input_help" id="file_input" type="file" onChange={handleOnChange} />
-                <p className="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">SVG, PNG, JPG or GIF (MAX. 800x400px).</p>
-
+                <label className="block mb-2 text-sm font-medium text-gray-900 " htmlFor="file_input">Upload file</label>
+                <input className="block w-full  text-lg text-gray-900 border-4 border-blue-600 rounded-lg cursor-pointer bg-gray-50  focus:outline-none  " aria-describedby="file_input_help" id="file_input" type="file" onChange={handleOnChange} />
+                <p className="mt-1 text-sm text-gray-500 " id="file_input_help">PNG, JPG, PDF</p>
               </div>
 
               <div className='py-9'>
